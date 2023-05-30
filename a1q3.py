@@ -36,3 +36,17 @@ while True:
     input_file = input('Enter text file name: ')
     input_textfile = open(input_file, 'r')
 
+    y_axis = 0
+    x_axis = 0
+
+    for line in input_textfile:
+        row = line.strip()
+        x_axis = len(row)
+        y_axis += 1
+
+
+    print(x_axis)
+    print(y_axis)
+
+
+
