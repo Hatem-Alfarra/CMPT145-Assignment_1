@@ -39,3 +39,8 @@ Design decisions and ideas:
     - The code should contain a function Conway(input_textfile), where the parameter is a file inputted.
     - The resulting grid/outcome should be stored in a new file named 'nxn_updated.txt', where n is the size of the grid.
 - The resulting list or array would need to be saved in a new file so a function should create a file for writing (using open and 'w').
+- I was thinking of making the game without using arrays, but it would be easier and using for loops I can iterate through an entire array. Reading surrounding cells would be done by subtracting or adding 1 to the x and y axis of the examined cell.
+- To ensure correct and efficient software constant testing and improving of the code would be necessary.
+- To ensure a robust software I will test the code with unusual inputs and perhaps add error print messages to tell the user what they have done wrong.
+- To ensure adaptability my code should consist of many functions rather than just one. 
+- To ensure reusability I will attempt having the program ask the user if they would like to see the next iteration after it has run once, or input a new text file. 
