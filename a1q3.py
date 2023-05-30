@@ -33,7 +33,6 @@ def Conway(input_textfile):
 
 
 while True:
-
-    input_textfile = input('Enter text file name: ')
-    f = open(input_textfile, 'r')
+    input_file = input('Enter text file name: ')
+    input_textfile = open(input_file, 'r')
 
