@@ -21,7 +21,7 @@ Note: This project is for assignment 1 question 3 for the course CMPT 145
 
 --
 
-Design decisions and ideas:
+### **Design decisions and ideas:**
 
 - To design the game of life I am thinking of the input txt file and how a function can process then output the next step without altering the initial text file.
 - First a function should open the file to read it.
