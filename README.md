@@ -62,21 +62,25 @@ Ans - Situations that may break my program would be tested for during the testin
 * Output file's name already exists (using the 'w' might overwrite over an already existing file. I am not sure how and if I can solve this).
 
 
-### Are there ways to make the program more efficient?
+### **Are there ways to make the program more efficient?**
 
 Ans - I am unsure, but perhaps some of my considerations would make a more efficient program. Those considerations include: 
 
 * Instead of looking for the dead cells symbol (-), the program would look for alive cells symbol (*) only. There is no need to count dead cells.
 
 
-Have I made choices that reduce future adaptability?
+
+### **Have I made choices that reduce future adaptability?**
 
 Ans - If I do find such choices I will attempt to modify the program to be more adaptable. 
 The nature of the assignment of requiring accepting a specific format (for the input text file) and expecting the same format for the output might make it less desirable to use because it is not interactive. There is also the design of the program required that requires the code to run one iteration and save it in another file that would make it more difficult to run several iterations.
 After this assignment I would want to learn (whether in course or on my own) how to make the game interactive in that it is visible boxes to be highlighted (alive) and many iterations can run one after the other.
 The code could be made to accept more than just the symbols used in the assignment document so that several representations of live and dead cells could be used to play the game (currently I do not have the skills to have the program accept both the symbols required and other variations of the symbols or making the game represent visible boxes)
 
-Which parts of this program might be useful in another project?
+
+
+
+### **Which parts of this program might be useful in another project?**
 
 Ans - 
 * Parts of this program could be useful for a bigger project of a less simple version of the game of life than the one used such as considering all surrounding boxes or making a visual representation of the game so that the input is not a text file.
