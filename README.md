@@ -44,3 +44,41 @@ Design decisions and ideas:
 - To ensure a robust software I will test the code with unusual inputs and perhaps add error print messages to tell the user what they have done wrong.
 - To ensure adaptability my code should consist of many functions rather than just one. 
 - To ensure reusability I will attempt having the program ask the user if they would like to see the next iteration after it has run once, or input a new text file. 
+
+--
+
+### **How do I know the program will work correctly?**
+
+Ans - I do not know for certain the program will always work correctly, but constant testing and working in small steps will help avoid bugs and would allow me to solve problems as they arise. This would help arriving at a program that does the required job and works correctly.
+
+### **What situations may break my program?**
+
+Ans - Situations that may break my program would be tested for during the testing stage and possibly include:
+* Unexpected content of inputted file including empty file.
+* The symbols make a rectangle rather than a square (x != y)
+* Wrong file format inputted.
+* Unexpected grid size (I will solve this by allowing almost any grid size as input rather than just 1*1, 2 *2, and 3 *3 (Rubust and adaptable))
+* Other input file issues
+* Output file's name already exists (using the 'w' might overwrite over an already existing file. I am not sure how and if I can solve this).
+
+
+### Are there ways to make the program more efficient?
+
+Ans - I am unsure, but perhaps some of my considerations would make a more efficient program. Those considerations include: 
+
+* Instead of looking for the dead cells symbol (-), the program would look for alive cells symbol (*) only. There is no need to count dead cells.
+
+
+Have I made choices that reduce future adaptability?
+
+Ans - If I do find such choices I will attempt to modify the program to be more adaptable. 
+The nature of the assignment of requiring accepting a specific format (for the input text file) and expecting the same format for the output might make it less desirable to use because it is not interactive. There is also the design of the program required that requires the code to run one iteration and save it in another file that would make it more difficult to run several iterations.
+After this assignment I would want to learn (whether in course or on my own) how to make the game interactive in that it is visible boxes to be highlighted (alive) and many iterations can run one after the other.
+The code could be made to accept more than just the symbols used in the assignment document so that several representations of live and dead cells could be used to play the game (currently I do not have the skills to have the program accept both the symbols required and other variations of the symbols or making the game represent visible boxes)
+
+Which parts of this program might be useful in another project?
+
+Ans - 
+* Parts of this program could be useful for a bigger project of a less simple version of the game of life than the one used such as considering all surrounding boxes or making a visual representation of the game so that the input is not a text file.
+* Another use of the code would the use of some functions to interpret text files with the (* and -) symbols. 
+* A function to export a certain value or desired output into a new file could be used and taken from the program I am to write.
