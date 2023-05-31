@@ -31,11 +31,7 @@ def Conway(input_textfile):
     return
 
 
-
-while True:
-    input_file = input('Enter text file name: ')
-    input_textfile = open(input_file, 'r')
-
+def symbols_to_numbers(input_textfile):
     y_axis = 0
     x_axis = 0
 
@@ -58,8 +54,17 @@ while True:
 
     array = np.array(new_array)
 
+    return array
+
+
+while True:
+    input_file = input('Enter text file name: ')
+    input_textfile = open(input_file, 'r')
+
+    array = symbols_to_numbers(input_textfile)
+
     # print(x_axis)
     # print(y_axis)
-    print(new_array)
+    # print(new_array)
     print(array)
 
