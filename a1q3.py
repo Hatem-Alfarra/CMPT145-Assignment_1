@@ -30,6 +30,7 @@ cells. A cell is either alive (*) or dead (-). At each step the following transi
 def Conway(input_textfile_numbers):
 
     dimensions = np.shape(input_textfile_numbers)
+    print(dimensions)
 
     for i in range(dimensions[0]):
         for j in range(dimensions[1]):
@@ -52,6 +53,14 @@ def Conway(input_textfile_numbers):
 
                 print(count)
 
+                if count < 2:
+                    input_textfile_numbers[i][j] = 0
+                elif count == 2 or count == 3:
+                    input_textfile_numbers[i][j] = 1
+                elif count > 3:
+                    input_textfile_numbers[i][j] = 0
+
+
             elif input_textfile_numbers[i][j] == 0:
                 if i != 0:
                     if input_textfile_numbers[i-1][j] == 1:
@@ -68,11 +77,10 @@ def Conway(input_textfile_numbers):
 
                 print(count)
 
-            # elif input_textfile_numbers[i][j] == 0:
+                if count == 3:
+                    input_textfile_numbers[i][j] = 1
 
-
-            # neighbours_count = (input_textfile_numbers[i-1][j]) + (input_textfile_numbers[i + 1][j]) + (input_textfile_numbers[i][j - 1]) + (input_textfile_numbers[i][j + 1])
-            # print(neighbours_count)
+    print(input_textfile_numbers)
 
 
 
