@@ -127,7 +127,6 @@ def symbols_to_numbers(input_textfile):
     return array
 
 
-
 def numbers_to_symbols(output_textfile_numbers):
     """Purpose:
         Convert an array with 1s and 0s to a text file where 1s become * symbols and 0s become - symbols
@@ -177,8 +176,7 @@ def output_textfile(output_textfile_numbers, output_textfile_to_be):
 
 
 
-
-
+# Allows looping through the program if another iteration is desired to be run
 while True:
     input_file = input('Enter text file name: ')
     input_textfile = open(input_file, 'r')
