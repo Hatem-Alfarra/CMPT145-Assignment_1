@@ -34,7 +34,27 @@ def Conway(input_textfile_numbers):
     for i in range(dimensions[0]):
         for j in range(dimensions[1]):
 
-            print(input_textfile_numbers[i][j])
+            count = 0
+
+            if input_textfile_numbers[i][j] == 1:
+                if i != 0:
+                    if input_textfile_numbers[i-1][j] == 1:
+                        count += 1
+                if i < (dimensions[0] - 1):
+                    if input_textfile_numbers[i+1][j] == 1:
+                        count += 1
+                if j != 0:
+                    if input_textfile_numbers[i][j-1] == 1:
+                        count += 1
+                if j < (dimensions[1] - 1):
+                    if input_textfile_numbers[i][j+1] == 1:
+                        count += 1
+
+            print(count)
+
+            # neighbours_count = (input_textfile_numbers[i-1][j]) + (input_textfile_numbers[i + 1][j]) + (input_textfile_numbers[i][j - 1]) + (input_textfile_numbers[i][j + 1])
+            # print(neighbours_count)
+
 
 
 
