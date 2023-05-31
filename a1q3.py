@@ -129,6 +129,14 @@ def symbols_to_numbers(input_textfile):
 
 
 def numbers_to_symbols(output_textfile_numbers):
+    """Purpose:
+        Convert an array with 1s and 0s to a text file where 1s become * symbols and 0s become - symbols
+    Pre-conditions:
+        Array with 1s and 0s only
+    Post-conditions:
+        None
+    Return:
+        A text file with * and - symbols"""
 
     symbol_map = {1: '*', 0: '-'}
 
@@ -142,6 +150,11 @@ def numbers_to_symbols(output_textfile_numbers):
     textfile = '\n'.join(lines)
 
     print(textfile)
+
+
+
+
+
 
 
 
