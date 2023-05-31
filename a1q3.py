@@ -29,8 +29,12 @@ cells. A cell is either alive (*) or dead (-). At each step the following transi
 
 def Conway(input_textfile_numbers):
 
-    # dimentions =
+    dimensions = np.shape(input_textfile_numbers)
 
+    for i in range(dimensions[0]):
+        for j in range(dimensions[1]):
+
+            print(input_textfile_numbers[i][j])
 
 
 
@@ -71,6 +75,9 @@ while True:
     input_textfile = open(input_file, 'r')
 
     input_textfile_numbers = symbols_to_numbers(input_textfile)
+    print(input_textfile_numbers)
+
+    Conway(input_textfile_numbers)
 
 
 
