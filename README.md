@@ -86,3 +86,33 @@ Ans -
 * Parts of this program could be useful for a bigger project of a less simple version of the game of life than the one used such as considering all surrounding boxes or making a visual representation of the game so that the input is not a text file.
 * Another use of the code would the use of some functions to interpret text files with the (* and -) symbols. 
 * A function to export a certain value or desired output into a new file could be used and taken from the program I am to write.
+
+
+--
+--
+
+
+### What design decisions/ choices/ assumptions you made.
+
+Ans - Becuase of how long this took me I have stuck to the initial requirements. I have also found it easier to convert the symbols to numbers (0s and 1s) run an iteration of the game, convert them back from numbers to symbols, then exporting them to a new file.
+The program runs if the width and length of a given document are equal, but I have also integrated a message to inform the user that their input is not valid if it has a rectangular format (i.e. length and height are not equal).
+
+### What ways you allowed for your to be extended.
+
+Ans - I have made my program where it has several functions rather than one. Those functions can be improved to accept different inputs and do more in the future. I attempted to make explanations as clear as possible for the program to be visited later in the future.
+
+### What design ideas you changed or altered from your original design plan and why.
+
+Ans- I have decided to convert the symbols to numbers before working with them for the main game. I did this because arrays (which I used) use numbers, and numbers are easier to use in this instance (I could also have used True and False, but I think using 0s and 1s was the better option)
+
+### What risks, bugs, or unfinished aspects exist, and where the issue may lie, or the way to resolve them, if there was more time.
+
+Ans - No bugs or unfinished aspects remain in my program, but risks would include unusual input that would break my program. I am happy with how it turned out.
+
+### What aspects of the program have been completed.
+
+Ans- All requirements given. 
+
+### Ways you might consider extending the program if there was more time
+
+Ans - Hopefully in the future I can revisit the code to add features to the program such as making boxes appear instead of requiring text files. I would also like to go through it again at the end of this course to see if I can make it more efficient, although I think it is efficient enough for my expertise level and knowledge.
