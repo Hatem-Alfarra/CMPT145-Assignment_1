@@ -147,11 +147,32 @@ def numbers_to_symbols(output_textfile_numbers):
         line = ''.join([symbol_map[value] for value in output_textfile_numbers[i]])
         lines.append(line)
 
-    textfile = '\n'.join(lines)
+    output_textfile_to_be = '\n'.join(lines)
 
-    print(textfile)
+    return(output_textfile_to_be)
 
 
+def output_textfile(output_textfile_numbers, output_textfile_to_be):
+    """
+    Purpose:
+            Creating a new file 'nxn_updated.txt' where n is the size of the grid
+    Pre-conditions:
+            2 parameters where the first is an array of 1s and 0s, and the second is the text to be written in the new
+            file
+    Post-conditions:
+            Any file with the same name will be overwritten by this new information and replaced by it
+    Return:
+            A file containing the contents from the second parameter
+            """
+
+    n = str(len(output_textfile_numbers))
+
+    new_name = n + 'x' + n + '_updated.txt'
+
+    output_textfile = open(new_name, 'w')
+    output_textfile.write(output_textfile_to_be)
+
+    output_textfile.close()
 
 
 
@@ -166,7 +187,9 @@ while True:
 
     output_textfile_numbers = Conway(input_textfile_numbers)
 
-    numbers_to_symbols(output_textfile_numbers)
+    output_textfile_to_be = numbers_to_symbols(output_textfile_numbers)
+
+    output_textfile(output_textfile_numbers, output_textfile_to_be)
 
 
 
