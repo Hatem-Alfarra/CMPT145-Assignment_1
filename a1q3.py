@@ -97,9 +97,6 @@ def Conway(input_textfile_numbers):
     return output_textfile_numbers
 
 
-
-
-
 def symbols_to_numbers(input_textfile):
     """
     Purpose:
@@ -131,13 +128,35 @@ def symbols_to_numbers(input_textfile):
 
 
 
+def numbers_to_symbols(output_textfile_numbers):
+
+    symbol_map = {1: '*', 0: '-'}
+
+    rows, cols = output_textfile_numbers.shape
+    lines = []
+
+    for i in range(rows):
+        line = ''.join([symbol_map[value] for value in output_textfile_numbers[i]])
+        lines.append(line)
+
+    textfile = '\n'.join(lines)
+
+    print(textfile)
+
+
+
 while True:
     input_file = input('Enter text file name: ')
     input_textfile = open(input_file, 'r')
 
     input_textfile_numbers = symbols_to_numbers(input_textfile)
 
-    Conway(input_textfile_numbers)
+    output_textfile_numbers = Conway(input_textfile_numbers)
+
+    numbers_to_symbols(output_textfile_numbers)
+
+
+
 
 
 
