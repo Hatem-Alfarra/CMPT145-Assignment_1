@@ -27,11 +27,25 @@ cells. A cell is either alive (*) or dead (-). At each step the following transi
 """)
 
 
-def Conway(input_textfile):
-    return
+def Conway(input_textfile_numbers):
+
+    # dimentions =
+
+
+
 
 
 def symbols_to_numbers(input_textfile):
+    """
+    Purpose:
+        convert a text file of * and - symbols to an array where the *'s become 1's and -'s become 0's
+    Pre-conditions:
+        Text file of * and - symbols only
+    Post-conditions:
+        None
+    Return:
+        An array with 1s and 0s
+    """
 
     new_array = []
     for line in input_textfile:
@@ -44,23 +58,19 @@ def symbols_to_numbers(input_textfile):
             elif symbol == '-':
                 new_row.append(0)
 
-
         new_array.append(new_row)
-
 
     array = np.array(new_array)
 
     return array
 
 
+
 while True:
     input_file = input('Enter text file name: ')
     input_textfile = open(input_file, 'r')
 
-    array = symbols_to_numbers(input_textfile)
+    input_textfile_numbers = symbols_to_numbers(input_textfile)
 
-    # print(x_axis)
-    # print(y_axis)
-    # print(new_array)
-    print(array)
+
 
