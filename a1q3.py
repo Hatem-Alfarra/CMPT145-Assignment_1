@@ -32,14 +32,10 @@ def Conway(input_textfile):
 
 
 def symbols_to_numbers(input_textfile):
-    y_axis = 0
-    x_axis = 0
 
     new_array = []
     for line in input_textfile:
         row = line.strip()
-        x_axis = len(row)
-        y_axis += 1
 
         new_row = []
         for symbol in row:
