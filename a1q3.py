@@ -45,7 +45,6 @@ def Conway(input_textfile_numbers):
 
     if x != y:
         print('Please use a square array (width equals height) instead')
-        return None
 
     output_textfile_numbers = np.zeros((x, y))
 
@@ -138,8 +137,6 @@ def numbers_to_symbols(output_textfile_numbers):
 
     symbol_map = {1: '*', 0: '-'}
 
-    if output_textfile_numbers == None:
-        return None
 
     rows, cols = output_textfile_numbers.shape
     lines = []
@@ -166,8 +163,6 @@ def output_textfile(output_textfile_numbers, output_textfile_to_be):
             A file containing the contents from the second parameter
             """
 
-    if output_textfile_numbers == None:
-        return
 
     n = str(len(output_textfile_numbers))
 
