@@ -1,5 +1,6 @@
-import numpy as np
-
-input_textfile_number = np.array(1,1)
-
-print(input_textfile_number)
+print("""
+Name: Hatem Alfarra
+NSID: Hma194
+Student #: 11291988
+Section: 145-01
+""")
