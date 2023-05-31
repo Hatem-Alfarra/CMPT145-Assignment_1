@@ -39,14 +39,27 @@ while True:
     y_axis = 0
     x_axis = 0
 
+    new_array = []
     for line in input_textfile:
         row = line.strip()
         x_axis = len(row)
         y_axis += 1
 
+        new_row = []
+        for symbol in row:
+            if symbol == '*':
+                new_row.append(1)
+            elif symbol == '-':
+                new_row.append(0)
 
-    print(x_axis)
-    print(y_axis)
+
+        new_array.append(new_row)
 
 
+    array = np.array(new_array)
+
+    # print(x_axis)
+    # print(y_axis)
+    print(new_array)
+    print(array)
 
