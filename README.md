@@ -1,6 +1,7 @@
 `Name: Hatem Alfarra`  
 `Student #: 11291988`  
-`NSID: Hma194`
+`NSID: Hma194` 
+`Section: CMPT 145-01`
 
 Note: This project is for assignment 1 question 3 for the course CMPT 145
 

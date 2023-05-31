@@ -26,7 +26,6 @@ cells. A cell is either alive (*) or dead (-). At each step the following transi
 
 """)
 
-
 def Conway(input_textfile_numbers):
     """
     Purpose:
@@ -46,7 +45,7 @@ def Conway(input_textfile_numbers):
 
     if x != y:
         print('Please use a square array (width equals height) instead')
-        return False
+        return None
 
     output_textfile_numbers = np.zeros((x, y))
 
@@ -139,6 +138,9 @@ def numbers_to_symbols(output_textfile_numbers):
 
     symbol_map = {1: '*', 0: '-'}
 
+    if output_textfile_numbers == None:
+        return None
+
     rows, cols = output_textfile_numbers.shape
     lines = []
 
@@ -164,6 +166,9 @@ def output_textfile(output_textfile_numbers, output_textfile_to_be):
             A file containing the contents from the second parameter
             """
 
+    if output_textfile_numbers == None:
+        return
+
     n = str(len(output_textfile_numbers))
 
     new_name = n + 'x' + n + '_updated.txt'
@@ -176,10 +181,20 @@ def output_textfile(output_textfile_numbers, output_textfile_to_be):
 
 
 
-# Allows looping through the program if another iteration is desired to be run
-while True:
-    input_file = input('Enter text file name: ')
-    input_textfile = open(input_file, 'r')
+
+def game_loop(input_textfile):
+    """
+        Purpose:
+                Encapsulates all the functions needed for the 'game of life' game
+        Pre-conditions:
+                Text file of symbols given as a parameter
+        Post-conditions:
+                A file is created that is the next iteration of the file given using the rules and requirements of the game.
+                Any file named in the same convention is replaced creating a new file 'nxn_updated.txt' where n is the
+                 size of the grid
+        Return:
+                None
+                """
 
     input_textfile_numbers = symbols_to_numbers(input_textfile)
 
@@ -190,7 +205,11 @@ while True:
     output_textfile(output_textfile_numbers, output_textfile_to_be)
 
 
-
+# Allows looping through the program if another iteration is desired to be run
+while True:
+    input_file = input('Enter text file name: ')
+    input_textfile = open(input_file, 'r')
+    game_loop(input_textfile)
 
 
 
