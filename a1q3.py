@@ -28,6 +28,17 @@ cells. A cell is either alive (*) or dead (-). At each step the following transi
 
 
 def Conway(input_textfile_numbers):
+    """
+    Purpose:
+        Play an iteration of the game of life
+    Pre-conditions:
+        For the parameter an array of equal height and width should be inputted
+    Post-conditions:
+        A new array is created and is the same size as the array for the parameter
+    Return:
+        An array of 1s and 0s after 1 cycle/iteration of the game of life. This happens only if the inputted array is
+         a square array.
+    """
 
     dimensions = np.shape(input_textfile_numbers)
     x = dimensions[0]
@@ -83,7 +94,7 @@ def Conway(input_textfile_numbers):
                 if count == 3:
                     output_textfile_numbers[i][j] = 1
 
-    print(output_textfile_numbers)
+    return output_textfile_numbers
 
 
 
